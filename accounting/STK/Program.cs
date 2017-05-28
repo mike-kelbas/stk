@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace STK
@@ -25,7 +22,7 @@ namespace STK
             if (AutorizeForm.Vhod)
             {
                 MainForm.isAdmin = AutorizeForm.Admin;
-                MainForm.userID = AutorizeForm.userID;
+                MainForm.userID = AutorizeForm.UserId;
                 Application.Run(new MainForm());
             }
         }

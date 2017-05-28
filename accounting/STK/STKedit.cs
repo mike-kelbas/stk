@@ -66,7 +66,7 @@ namespace STK.Resources
             else
             {
                 Zap = string.Format("INSERT INTO STK " +
-                "(NameSTK,TypeSTK,FactNum,YearMan,Location,Note,Param1,Param2,Param3,Param4,Param5,Param6) Values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10'},'{11}')",
+                "(NameSTK,TypeSTK,FactNum,YearMan,Location,Note,Param1,Param2,Param3,Param4,Param5,Param6) Values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')",
                 TBNameSTK.Text, CBTypeSTK.SelectedValue, TBfactnum.Text, Convert.ToInt32(TByearman.Text), TBlocation.Text, TBnote.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text);
 
             }

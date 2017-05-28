@@ -1,6 +1,6 @@
 ﻿namespace STK
 {
-    partial class TypeSTKedit
+    partial class TypeSTKedit1
     {
         /// <summary>
         /// Required designer variable.
@@ -91,7 +91,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "TypeSTKedit";
+            this.Name = "BidEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Тип техники";
             this.Load += new System.EventHandler(this.TypeSTKedit_Load);

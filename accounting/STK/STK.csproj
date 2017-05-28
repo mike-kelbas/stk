@@ -47,11 +47,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -73,17 +77,17 @@
     <Compile Include="AutorizeForm.Designer.cs">
       <DependentUpon>AutorizeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bid.cs">
+    <Compile Include="BidsMy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bid.Designer.cs">
-      <DependentUpon>Bid.cs</DependentUpon>
+    <Compile Include="BidsMy.Designer.cs">
+      <DependentUpon>BidsMy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bids.cs">
+    <Compile Include="BidsAll.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bids.Designer.cs">
-      <DependentUpon>Bids.cs</DependentUpon>
+    <Compile Include="BidsAll.Designer.cs">
+      <DependentUpon>BidsAll.cs</DependentUpon>
     </Compile>
     <Compile Include="CommissioningForm.cs">
       <SubType>Form</SubType>
@@ -208,6 +212,12 @@
     <Compile Include="TypeSTK.Designer.cs">
       <DependentUpon>TypeSTK.cs</DependentUpon>
     </Compile>
+    <Compile Include="BidEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BidEdit.Designer.cs">
+      <DependentUpon>BidEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="TypeSTKedit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,11 +227,11 @@
     <EmbeddedResource Include="AutorizeForm.resx">
       <DependentUpon>AutorizeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Bid.resx">
-      <DependentUpon>Bid.cs</DependentUpon>
+    <EmbeddedResource Include="BidsMy.resx">
+      <DependentUpon>BidsMy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Bids.resx">
-      <DependentUpon>Bids.cs</DependentUpon>
+    <EmbeddedResource Include="BidsAll.resx">
+      <DependentUpon>BidsAll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CommissioningForm.resx">
       <DependentUpon>CommissioningForm.cs</DependentUpon>
@@ -293,9 +303,13 @@
     <EmbeddedResource Include="TypeSTK.resx">
       <DependentUpon>TypeSTK.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BidEdit.resx">
+      <DependentUpon>BidEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TypeSTKedit.resx">
       <DependentUpon>TypeSTKedit.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

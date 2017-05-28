@@ -76,25 +76,18 @@ namespace STK
             label4.Text = selectedRowCount.ToString();
         }
 
-        
-      
-
-       
-
-      
-
         private void button3_Click(object sender, EventArgs e)
         {
-            TypeSTKedit.ID = 0;
-            TypeSTKedit typeSTKEdit = new TypeSTKedit();
+            TypeSTKedit1.ID = 0;
+            TypeSTKedit1 typeSTKEdit = new TypeSTKedit1();
             typeSTKEdit.ShowDialog();
             ShowTypeSTK();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TypeSTKedit.ID = (int)dataGridView1.SelectedRows[0].Cells["ID"].Value;
-            TypeSTKedit typeSTKEdit = new TypeSTKedit();
+            TypeSTKedit1.ID = (int)dataGridView1.SelectedRows[0].Cells["ID"].Value;
+            TypeSTKedit1 typeSTKEdit = new TypeSTKedit1();
             typeSTKEdit.ShowDialog();
             ShowTypeSTK(); 
         }
@@ -116,7 +109,5 @@ namespace STK
                 MessageBox.Show("Ошибка удаления!");
             }
         }
-
-      
     }
 }

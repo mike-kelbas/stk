@@ -1,13 +1,7 @@
 ﻿using STK.Resources;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace STK
@@ -56,9 +50,7 @@ namespace STK
                 FuncToolStripMenuItem.Visible = false;
                 contextMenuStrip1.Enabled = false;
             }
-
-
-
+            
             dataGridView1.TopLeftHeaderCell.Value = "№ п/п";
 
             if (isAdmin)
@@ -75,8 +67,6 @@ namespace STK
                 Adap.Fill(Tabl);
                 dataGridView1.DataSource = Tabl;
             }
-
-
 
             dataGridView1.Columns[0].HeaderText = "ID";
             dataGridView1.Columns[0].Visible = false;
@@ -103,7 +93,6 @@ namespace STK
         {
             ShowSTK();
 
-           
             toolTip1.SetToolTip(button2, "Журнал учета техники");
             toolTip1.SetToolTip(button3, "Журнал отправки в ремонт");
             toolTip1.SetToolTip(button4, "Журнал технической эксплуатации");
@@ -121,10 +110,7 @@ namespace STK
             toolTip1.SetToolTip(button18, "Модернизировать");
             toolTip1.SetToolTip(button19, "Списть");
             toolTip1.SetToolTip(button21, "Отправить заявку");
-            
         }
-
-
 
         private void сотрудникиToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -208,11 +194,12 @@ namespace STK
             label4.Text = selectedRowCount.ToString();
         }
 
-      private void dataGridView1_MouseMove(object sender, MouseEventArgs e)
+        private void dataGridView1_MouseMove(object sender, MouseEventArgs e)
         {
             label2.Text = dataGridView1.RowCount.ToString();
-            label6.Text = (dataGridView1.CurrentRow.Index + 1).ToString();
-            Int32 selectedRowCount = dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            label6.Text = (dataGridView1.CurrentRow?.Index + 1)?.ToString() ?? string.Empty;
+            
+            var selectedRowCount = dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
             label4.Text = selectedRowCount.ToString();
         }
 
@@ -319,7 +306,7 @@ namespace STK
 
         private void button7_Click(object sender, EventArgs e)
         {
-            var bids = new Bids();
+            var bids = new BidsAll();
             bids.ShowDialog();
         }
 
@@ -333,8 +320,7 @@ namespace STK
 
         private void button21_Click(object sender, EventArgs e)
         {
-            Bid.userID = userID;
-            var bid = new Bid();
+            var bid = new BidsMy();
             bid.ShowDialog();
         }
 
@@ -455,6 +441,5 @@ namespace STK
         {
             button10_Click(sender, e);
         }
-
     }
 }

@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace STK
 {
-    public partial class TypeSTKedit : Form
+    public partial class TypeSTKedit1 : Form
     {
         public static int ID;
 
-        public TypeSTKedit()
+        public TypeSTKedit1()
         {
             InitializeComponent();
         }
@@ -23,7 +23,6 @@ namespace STK
 
         private void TypeSTKedit_Load(object sender, EventArgs e)
         {
-
             if (ID != 0)
             {
                 DataTable Tabl = new DataTable();
@@ -43,15 +42,14 @@ namespace STK
                 Zap = string.Format("UPDATE TypeSTK SET " +
                 "NameType='{0}',Expected='{1}' WHERE ID='{2}'",
                 TBNameType.Text, TBExpected.Text, ID);
-
             }
             else
             {
                 Zap = string.Format("INSERT INTO TypeSTK " +
                 "(NameType,Expected) Values('{0}','{1}')",
                 TBNameType.Text, TBExpected.Text);
-
             }
+
             SqlCommand cmd = new SqlCommand(Zap, Static.Con);
             cmd.ExecuteNonQuery();
             this.Close();
